@@ -386,7 +386,7 @@ class ASDNPretrainLossLayer(caffe.Layer):
 
             mask_label[i, :, :, :] = conv_feat_mask[min_id]
 
-
+        # copy from: https://github.com/philkr/voc-classification/blob/master/src/python_layers.py#L52
         f, df, t = bottom[0].data, bottom[0].diff, mask_label
         mask = (self.ignore_label is None or t != self.ignore_label)
         lZ  = np.log(1+np.exp(-np.abs(f))) * mask
@@ -744,6 +744,7 @@ class ASDNLossLayer(caffe.Layer):
         labels = np.reshape(labels, N)
 
 
+        # copy from: https://github.com/philkr/voc-classification/blob/master/src/python_layers.py#L52
         f, df, t = bottom[0].data, bottom[0].diff, bottom[1].data
         mask = (self.ignore_label is None or t != self.ignore_label)
         lZ  = np.log(1+np.exp(-np.abs(f))) * mask
