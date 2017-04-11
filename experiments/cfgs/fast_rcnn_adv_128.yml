@@ -1,0 +1,12 @@
+EXP_DIR: fast_rcnn_adv
+MATLAB: /opt/matlab/8.1/bin/matlab
+TRAIN:
+  BG_THRESH_LO: 0.0
+  # we use gradient accumulation,
+  # see solver.prototxt (iter_size: 2)
+  IMS_PER_BATCH: 1
+  # adjust batch_size for iter_size
+  BATCH_SIZE: 128
+  USE_OHEM: False
+  # Wasn't used in the paper (impact unknown).
+  ASPECT_GROUPING: False
