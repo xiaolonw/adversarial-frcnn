@@ -3,7 +3,7 @@ By Xiaolong Wang, Abhinav Shrivastava, and Abhinav Gupta
 
 ### Introduction
 
-This is a Caffe based version of A-Fast-RCNN ([arxiv_link](https://arxiv.org/pdf/1704.03414.pdf) ). Although we originally implement it on torch, this Caffe re-implementation is much simpler, faster and easier to use. 
+This is a Caffe based version of A-Fast-RCNN ([arxiv_link](https://arxiv.org/pdf/1704.03414.pdf)). Although we originally implement it on torch, this Caffe re-implementation is much simpler, faster and easier to use. 
 
 We release the code for training A-Fast-RCNN with Adversarial Spatial Dropout Network. 
 
